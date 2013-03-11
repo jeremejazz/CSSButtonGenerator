@@ -104,3 +104,13 @@ h1 { font: 46px Georgia, Serif; margin: 0 0 20px 0; }
 .colorpicker {
     z-index: 1000;
 }
+
+/*Word wrap code */
+.prettyprint{
+
+     white-space: pre-wrap;     
+ white-space: -moz-pre-wrap;  
+ white-space: -pre-wrap;    
+ white-space: -o-pre-wrap;  
+ word-wrap: break-word;    
+}

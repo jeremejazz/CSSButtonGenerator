@@ -8,12 +8,16 @@
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/colorpicker.css' />
-	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+    <link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+     <link rel='stylesheet' type='text/css' href='css/prettify.css' /> 
+	 <link rel='stylesheet' type='text/css' href='css/sunburst.css' /> 
 
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>    
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'></script>
     <script type='text/javascript' src='js/colorpicker.js'></script>
     <script type='text/javascript' src='js/buttonmaker.js'></script>
+    <script type='text/javascript' src='js/prettify.js'></script> 
+    <script type='text/javascript' src='js/lang-css.js'></script>
 </head>
 
 <body>
@@ -87,7 +91,9 @@
 	</div>
 	
     <div id="the-css">
-        <textarea id="codebox"></textarea>
+        <pre class="prettyprint lang-css" id="the-code">
+        </pre>
+
     </div>
 	
 </body>

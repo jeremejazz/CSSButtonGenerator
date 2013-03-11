@@ -15,7 +15,11 @@ cssStuff['activeBackground']   = "#1b435e";
 cssStuff['fontSize']           = "14px";
 cssStuff['fontStack']          = "Georgia, serif";
     
-function createCSS() {    
+function createCSS() {  
+
+    $(".prettyprint").removeClass('prettyprinted');
+
+
     cssText              = "  .button { \n";
     cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
@@ -56,7 +60,9 @@ function createCSS() {
             
     $("style").replaceWith("<style type='text/css'>" + cssText + "</style>");
   //  $("#the-css").text(cssText);
-    $("#codebox").text(cssText);
+    $("#the-code").text(cssText);
+
+    prettyPrint(); //call prettify function
 }
 
 function reCenterButton() {
@@ -140,12 +146,15 @@ $(function() {
     });
     
     $(".button").click(function() {
-        $("#the-css").dialog({
-            "title": "The CSS",
-            "width": 400
-        });
+        $("#the-css").dialog('open');
     });
     
-
+    /*initialize the dialog*/
+    $("#the-css").dialog({
+            "title": "The CSS",
+            "width": 440,
+            resizable: false,
+            autoOpen: false
+        });
 
 });
