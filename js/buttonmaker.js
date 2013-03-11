@@ -13,41 +13,41 @@ cssStuff['hoverColor']         = "#ccc";
 cssStuff['hoverBackground']    = "#28597a";
 cssStuff['activeBackground']   = "#1b435e";
 cssStuff['fontSize']           = "14px";
-cssStuff['fontStack']          = "Georgia, serif";
+cssStuff['fontStack']          = "Arial, Helvetica, sans-serif";
     
 function createCSS() {    
-    cssText              = "  .button { ";
-    cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";";
+    cssText              = "  .button { \n";
+    cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
-    cssText             += "     background: " + cssStuff['backgroundBottom'] + ";";
-    cssText             += "     background: -webkit-gradient(linear, left top, left bottom, from(" + cssStuff['backgroundTop'] + "), to(" + cssStuff['backgroundBottom'] + "));";
-    cssText             += "     background: -moz-linear-gradient(top, " + cssStuff['backgroundTop'] + ", " + cssStuff['backgroundBottom'] + ");";
+    cssText             += "     background: " + cssStuff['backgroundBottom'] + ";\n";
+    cssText             += "     background: -webkit-gradient(linear, left top, left bottom, from(" + cssStuff['backgroundTop'] + "), to(" + cssStuff['backgroundBottom'] + "));\n";
+    cssText             += "     background: -moz-linear-gradient(top, " + cssStuff['backgroundTop'] + ", " + cssStuff['backgroundBottom'] + ");\n";
     
-    cssText             += "     padding: " + cssStuff['buttonPadding'] + ";";
+    cssText             += "     padding: " + cssStuff['buttonPadding'] + ";\n";
     
-    cssText             += "     -webkit-border-radius: " + cssStuff['borderRadius'] + ";";
-    cssText             += "     -moz-border-radius: " + cssStuff['borderRadius'] + ";";
-    cssText             += "     border-radius: " + cssStuff['borderRadius'] + ";";
+    cssText             += "     -webkit-border-radius: " + cssStuff['borderRadius'] + ";\n";
+    cssText             += "     -moz-border-radius: " + cssStuff['borderRadius'] + ";\n";
+    cssText             += "     border-radius: " + cssStuff['borderRadius'] + ";\n";
     
-    cssText             += "     -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;";
-    cssText             += "     -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;";
-    cssText             += "     box-shadow: rgba(0,0,0,1) 0 1px 0;";
+    cssText             += "     -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;\n";
+    cssText             += "     -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;\n";
+    cssText             += "     box-shadow: rgba(0,0,0,1) 0 1px 0;\n";
     
-    cssText             += "     text-shadow: rgba(0,0,0,.4) 0 1px 0;";
+    cssText             += "     text-shadow: rgba(0,0,0,.4) 0 1px 0;\n";
     
-    cssText             += "     color: " + cssStuff['textColor'] + ";";
-    cssText             += "     font-size: " + cssStuff['fontSize'] + ";";
-    cssText             += "     font-family: " + cssStuff['fontStack'] + ";";
-    cssText             += "     text-decoration: none;";
-    cssText             += "     vertical-align: middle;";
+    cssText             += "     color: " + cssStuff['textColor'] + ";\n";
+    cssText             += "     font-size: " + cssStuff['fontSize'] + ";\n";
+    cssText             += "     font-family: " + cssStuff['fontStack'] + ";\n";
+    cssText             += "     text-decoration: none;\n";
+    cssText             += "     vertical-align: middle;\n";
     
-    cssText             += "  }";
+    cssText             += "  }\n";
     
-    cssText             += "  .button:hover { ";
-    cssText             += "     border-top-color: " + cssStuff['hoverBackground'] + ";";
-    cssText             += "     background: " + cssStuff['hoverBackground'] + ";";
-    cssText             += "     color: " + cssStuff['hoverColor'] + ";";
-    cssText             += "  }";
+    cssText             += "  .button:hover { \n";
+    cssText             += "     border-top-color: " + cssStuff['hoverBackground'] + ";\n";
+    cssText             += "     background: " + cssStuff['hoverBackground'] + ";\n";
+    cssText             += "     color: " + cssStuff['hoverColor'] + ";\n";
+    cssText             += "  }\n";
     
     cssText             += "  .button:active { ";
     cssText             += "     border-top-color: " + cssStuff['activeBackground'] + ";";
@@ -55,7 +55,7 @@ function createCSS() {
     cssText             += "  }";
             
     $("style").replaceWith("<style type='text/css'>" + cssText + "</style>");
-    $("#the-css").text(cssText);
+    $("#the-code").text(cssText);
 }
 
 function reCenterButton() {
@@ -139,12 +139,14 @@ $(function() {
     });
     
     $(".button").click(function() {
-        $("#the-css").dialog({
-            "title": "The CSS",
-            "width": 400
-        });
+          $("#the-code").dialog('open');
     });
     
-
+        $("#the-code").dialog({
+            "title": "The CSS",
+            "width": 450,
+            resizeable: false,
+            autoOpen: false
+        });
 
 });

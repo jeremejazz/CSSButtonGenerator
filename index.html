@@ -8,10 +8,10 @@
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/colorpicker.css' />
-	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+	<link rel='stylesheet' type='text/css' href='css/vader/jquery-ui-1.10.1.custom.min.css' />
 
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>    
-    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='js/jquery-1.9.1.min.js'></script>    
+    <script type='text/javascript' src='js/jquery-ui-1.10.1.custom.min.js'></script>
     <script type='text/javascript' src='js/colorpicker.js'></script>
     <script type='text/javascript' src='js/buttonmaker.js'></script>
 </head>
@@ -74,16 +74,27 @@
             </div>
             
             <select id="fontSelector">
+                <option selected="seleted" value="Arial, Helvetica, sans-serif" >Arial</option>
+                <option value="'Arial Black', Gadget, sans-serif">Arial Black</option>
+                <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans</option>
                 <option value="Helvetica, Arial, Sans-Serif">Helvetica</option>
-                <option selected="seleted" value="Georgia, Serif">Georgia</option>
+                <option value="Impact, Charcoal, sans-serif">Impact</option>
+                <option  value="Georgia, Serif">Georgia</option>
                 <option value="'Lucida Grande', Helvetica, Arial, Sans-Serif">Lucida Grande</option>
+                <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
+                <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
+                <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                <option value="Verdana, Geneva, sans-serif">Verdana</option>
             </select>
                 
         </div>
     	
 	</div>
 	
-    <div id="the-css"></div>
+    <div id="the-css">
+        <pre id="the-code">
+        </pre>
+    </div>
 	
 </body>
 
