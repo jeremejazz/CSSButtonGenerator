@@ -8,12 +8,16 @@
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/colorpicker.css' />
-	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+    <link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+     <link rel='stylesheet' type='text/css' href='css/prettify.css' /> 
+	 <link rel='stylesheet' type='text/css' href='css/sunburst.css' /> 
 
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>    
     <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'></script>
     <script type='text/javascript' src='js/colorpicker.js'></script>
     <script type='text/javascript' src='js/buttonmaker.js'></script>
+    <script type='text/javascript' src='js/prettify.js'></script> 
+    <script type='text/javascript' src='js/lang-css.js'></script>
 </head>
 
 <body>
@@ -22,7 +26,7 @@
   
     	<div id="button-box">
     
-    		<a href="#" class="button">View the CSS</a>
+    		<a href="javascript:void(0);" class="button">View the CSS</a>
     			
     	</div>
     	
@@ -74,6 +78,9 @@
             </div>
             
             <select id="fontSelector">
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="'Courier New', Courier, monospace">Courier New</option>
+                <option value="Impact, Charcoal, sans-serif">Impact</option>
                 <option value="Helvetica, Arial, Sans-Serif">Helvetica</option>
                 <option selected="seleted" value="Georgia, Serif">Georgia</option>
                 <option value="'Lucida Grande', Helvetica, Arial, Sans-Serif">Lucida Grande</option>
@@ -83,7 +90,11 @@
     	
 	</div>
 	
-    <div id="the-css"></div>
+    <div id="the-css">
+        <pre class="prettyprint lang-css" id="the-code">
+        </pre>
+
+    </div>
 	
 </body>
 
