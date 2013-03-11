@@ -16,6 +16,8 @@ cssStuff['fontSize']           = "14px";
 cssStuff['fontStack']          = "Arial, Helvetica, sans-serif";
     
 function createCSS() {    
+
+    $("#the-code").removeClass("prettyprinted");
     cssText              = "  .button { \n";
     cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
@@ -49,13 +51,14 @@ function createCSS() {
     cssText             += "     color: " + cssStuff['hoverColor'] + ";\n";
     cssText             += "  }\n";
     
-    cssText             += "  .button:active { ";
-    cssText             += "     border-top-color: " + cssStuff['activeBackground'] + ";";
-    cssText             += "     background: " + cssStuff['activeBackground'] + ";";
-    cssText             += "  }";
+    cssText             += "  .button:active { \n";
+    cssText             += "     border-top-color: " + cssStuff['activeBackground'] + ";\n";
+    cssText             += "     background: " + cssStuff['activeBackground'] + ";\n";
+    cssText             += "  }\n";
             
     $("style").replaceWith("<style type='text/css'>" + cssText + "</style>");
     $("#the-code").text(cssText);
+    prettyPrint();
 }
 
 function reCenterButton() {
@@ -146,7 +149,8 @@ $(function() {
             "title": "The CSS",
             "width": 450,
             resizeable: false,
-            autoOpen: false
+            autoOpen: false,
+      
         });
 
 });

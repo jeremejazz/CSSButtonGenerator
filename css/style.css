@@ -99,6 +99,7 @@ h1 { font: 46px Georgia, Serif; margin: 0 0 20px 0; }
     height: 100%;
     padding-top: 5px;
     position: absolute;
+    cursor:pointer;
 }
 
 .colorpicker {
