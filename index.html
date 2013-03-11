@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Button Maker</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	<link rel='stylesheet' type='text/css' href='css/colorpicker.css' />
+	<link rel='stylesheet' type='text/css' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery-ui.css' />
+
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>    
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='js/colorpicker.js'></script>
+    <script type='text/javascript' src='js/buttonmaker.js'></script>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+  
+    	<div id="button-box">
+    
+    		<a href="#" class="button">View the CSS</a>
+    			
+    	</div>
+    	
+    	<div id="controls">
+    	
+    	    <h1>Button Maker</h1>
+
+            <div class="sliderBar" id="sizer"></div>
+            <div class="sliderBar" id="font-sizer"></div>
+            <div class="sliderBar" id="border-rounder"></div>
+            
+            <div id="colors">
+            
+                <div>
+                    <label for="topGradientValue">Top Gradient Color</label>
+                    <input type="text" maxlength="6" size="6" id="topGradientValue" class="pickable" rel="backgroundTop" value="3e779d" style="background: #3e779d;" />
+                </div>
+                
+                <div>
+                    <label for="bottomGradientValue">Bottom Gradient Color</label>
+                    <input type="text" maxlength="6" size="6" id="bottomGradientValue" class="pickable" rel="backgroundBottom" value="65a9d7" style="background: #65a9d7;" />
+                </div>
+                
+                <div>
+                    <label for="borderTopColorValue">Top Border Color</label>
+                    <input type="text" maxlength="6" size="6" id="borderTopColorValue" class="pickable" rel="borderTopColor" value="96d1f8" style="background: #96d1f8;" />
+                </div>
+                
+                <div>
+                    <label for="hoverBackgroundColorValue">Hover Background Color</label>
+                    <input type="text" maxlength="6" size="6" id="hoverBackgroundColorValue" class="pickable" rel="hoverBackground" value="28597a" style="background: #28597a;" />
+                </div>
+                
+                <div>
+                    <label for="textColor">Text Color</label>
+                    <input type="text" maxlength="6" size="6" id="textColor" class="pickable" rel="textColor" value="white" style="background: white;" />
+                </div>
+                
+                <div>
+                    <label for="hoverTextColorValue">Hover Text Color</label>
+                    <input type="text" maxlength="6" size="6" id="hoverTextColorValue" class="pickable" rel="hoverColor" value="cccccc" style="background: #cccccc;" />
+                </div>
+                
+                <div>
+                    <label for="activeBackgroundColor">Active Background Color</label>
+                    <input type="text" maxlength="6" size="6" id="activeBackgroundColor" class="pickable" rel="activeBackground" value="1b435e" style="background: #1b435e;" />
+                </div>
+            
+            </div>
+            
+            <select id="fontSelector">
+                <option value="Helvetica, Arial, Sans-Serif">Helvetica</option>
+                <option selected="seleted" value="Georgia, Serif">Georgia</option>
+                <option value="'Lucida Grande', Helvetica, Arial, Sans-Serif">Lucida Grande</option>
+            </select>
+                
+        </div>
+    	
+	</div>
+	
+    <div id="the-css"></div>
+	
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+/*
+	 Button Maker
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+* { margin: 0; padding: 0; }
+body { font: 14px Georgia, serif; background: #393939; color: white; }
+body, html { height: 100%; }
+#page-wrap { width: 1000px; margin: 30px auto; overflow: hidden; }
+#button-box { height: 500px; width: 500px; position: relative; float: left; background: url(../images/grad.png) no-repeat; }
+#controls { width: 460px; padding: 20px; float: right; }
+h1 { font: 46px Georgia, Serif; margin: 0 0 20px 0; }
+
+.button {
+    position: absolute;
+}
+
+.button {
+	border-top: 1px solid #96d1f8;
+	
+	background: #3e779d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+	background: -moz-linear-gradient(top,  #65a9d7,  #3e779d);
+	
+	padding: 5px 10px;
+	
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	
+	-webkit-box-shadow: black 0 1px 0;
+	-moz-box-shadow: black 0 1px 0;
+	box-shadow: black 0 1px 0;
+	
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	
+	color: white;
+	font-size: 14px;
+	text-decoration: none; 
+	vertical-align: middle;
+}
+.button:hover {
+    border-top-color: #28597a;
+	background: #28597a;
+    color: #ccc; 
+}
+.button:active {
+    border-top-color: #1b435e;
+	background: #1b435e;
+	outline: 0;
+}
+
+#the-css {
+    display: none;
+}
+
+.sliderBar {
+    margin: 0 0 15px 0; 
+}
+
+.ui-dialog-content {
+    font: 12px Monaco, MonoSpace;
+}
+
+#colors > div {
+    position: relative; 
+    width: 100%;
+    height: 30px;
+    margin: 0 0 5px 0; 
+}
+
+#colors > div > input {
+    width: 300px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+#colors > div > label:hover {
+    font-weight: bold;
+}
+
+#colors > div > label {
+    display: block;
+    text-align: center;
+    color: black;
+    position: relative;
+    z-index: 20; 
+    color: white;
+    text-shadow: 0 0 8px black, 0 1px 0 black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    position: absolute;
+}
+
+.colorpicker {
+    z-index: 1000;
+}
