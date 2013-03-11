@@ -13,14 +13,12 @@ cssStuff['hoverColor']         = "#ccc";
 cssStuff['hoverBackground']    = "#28597a";
 cssStuff['activeBackground']   = "#1b435e";
 cssStuff['fontSize']           = "14px";
-cssStuff['fontStack']          = "Georgia, serif";
+cssStuff['fontStack']          = "Arial, Helvetica, sans-serif";
     
-function createCSS() {  
+function createCSS() {    
 
-    $(".prettyprint").removeClass('prettyprinted');
-
-
-    cssText              = "  .button { \n";
+    $("#the-code").removeClass("prettyprinted");
+    cssText              = ".button { \n";
     cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
     cssText             += "     background: " + cssStuff['backgroundBottom'] + ";\n";
@@ -44,8 +42,9 @@ function createCSS() {
     cssText             += "     font-family: " + cssStuff['fontStack'] + ";\n";
     cssText             += "     text-decoration: none;\n";
     cssText             += "     vertical-align: middle;\n";
+    cssText             += "     cursor:pointer;\n";
     
-    cssText             += "  }";
+    cssText             += "  }\n";
     
     cssText             += "  .button:hover { \n";
     cssText             += "     border-top-color: " + cssStuff['hoverBackground'] + ";\n";
@@ -56,13 +55,11 @@ function createCSS() {
     cssText             += "  .button:active { \n";
     cssText             += "     border-top-color: " + cssStuff['activeBackground'] + ";\n";
     cssText             += "     background: " + cssStuff['activeBackground'] + ";\n";
-    cssText             += "  }";
+    cssText             += "  }\n";
             
     $("style").replaceWith("<style type='text/css'>" + cssText + "</style>");
-  //  $("#the-css").text(cssText);
     $("#the-code").text(cssText);
-
-    prettyPrint(); //call prettify function
+    prettyPrint();
 }
 
 function reCenterButton() {
@@ -146,15 +143,15 @@ $(function() {
     });
     
     $(".button").click(function() {
-        $("#the-css").dialog('open');
+          $("#the-code").dialog('open');
     });
     
-    /*initialize the dialog*/
-    $("#the-css").dialog({
+        $("#the-code").dialog({
             "title": "The CSS",
-            "width": 440,
-            resizable: false,
-            autoOpen: false
+            "width": 450,
+            resizeable: false,
+            autoOpen: false,
+      
         });
 
 });
