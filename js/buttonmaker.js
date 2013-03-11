@@ -18,7 +18,7 @@ cssStuff['fontStack']          = "Arial, Helvetica, sans-serif";
 function createCSS() {    
 
     $("#the-code").removeClass("prettyprinted");
-    cssText              = "  .button { \n";
+    cssText              = ".button { \n";
     cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
     cssText             += "     background: " + cssStuff['backgroundBottom'] + ";\n";
@@ -42,6 +42,7 @@ function createCSS() {
     cssText             += "     font-family: " + cssStuff['fontStack'] + ";\n";
     cssText             += "     text-decoration: none;\n";
     cssText             += "     vertical-align: middle;\n";
+    cssText             += "     cursor:pointer;\n";
     
     cssText             += "  }\n";
     
