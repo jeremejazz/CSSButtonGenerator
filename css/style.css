@@ -107,7 +107,7 @@ h1 { font: 46px Georgia, Serif; margin: 0 0 20px 0; }
 }
 
 #the-code{
-    width:100%;
+  
     height:100%;
 white-space: pre-wrap;    
  white-space: -moz-pre-wrap; 
@@ -116,4 +116,10 @@ white-space: pre-wrap;
  word-wrap: break-word;      
 
 
+}
+
+#howto{
+
+    width:300px;
+    display: none;
 }

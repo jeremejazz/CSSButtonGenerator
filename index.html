@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
 	
-	<title>Button Maker</title>
+	<title>CSS Button Maker</title>
 	
 	<link rel='stylesheet' type='text/css' href='css/style.css' />
 	<link rel='stylesheet' type='text/css' href='css/colorpicker.css' />
@@ -31,8 +31,28 @@
     	</div>
     	
     	<div id="controls">
-    	
-    	    <h1>Button Maker</h1>
+
+    	    <h1>CSS Button Maker</h1>
+
+                          <div>
+
+            <label for="fontSelector">Font: </label>
+                <select id="fontSelector">
+                    <option selected="seleted" value="Arial, Helvetica, sans-serif" >Arial</option>
+                    <option value="'Arial Black', Gadget, sans-serif">Arial Black</option>
+                    <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans</option>
+                    <option value="Helvetica, Arial, Sans-Serif">Helvetica</option>
+                    <option value="Impact, Charcoal, sans-serif">Impact</option>
+                    <option  value="Georgia, Serif">Georgia</option>
+                    <option value="'Lucida Grande', Helvetica, Arial, Sans-Serif">Lucida Grande</option>
+                    <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
+                    <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
+                    <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
+                    <option value="Verdana, Geneva, sans-serif">Verdana</option>
+                </select>
+            <br/>
+            <br/>
+                          </div>
                 <label>Padding: </label>
             <div class="sliderBar" id="sizer"></div>
               <label>Font Size: </label>
@@ -78,29 +98,41 @@
                 </div>
             
             </div>
-            <label for="fontSelector">Font: </label>
-            <select id="fontSelector">
-                <option selected="seleted" value="Arial, Helvetica, sans-serif" >Arial</option>
-                <option value="'Arial Black', Gadget, sans-serif">Arial Black</option>
-                <option value="'Comic Sans MS', cursive, sans-serif">Comic Sans</option>
-                <option value="Helvetica, Arial, Sans-Serif">Helvetica</option>
-                <option value="Impact, Charcoal, sans-serif">Impact</option>
-                <option  value="Georgia, Serif">Georgia</option>
-                <option value="'Lucida Grande', Helvetica, Arial, Sans-Serif">Lucida Grande</option>
-                <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
-                <option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Lucida Sans Unicode</option>
-                <option value="'Trebuchet MS', Helvetica, sans-serif">Trebuchet MS</option>
-                <option value="Verdana, Geneva, sans-serif">Verdana</option>
-            </select>
+
                 
         </div>
     	
 	</div>
 	
     <div id="the-css">
-        <pre id="the-code" class="prettyprint lang-css">
+        <pre id="the-code" class="prettyprint lang-css csscode">
         </pre>
     </div>
+
+    <div id="howto" title="How to use this">
+        <p>
+            <h2>How to use this</h2>
+                Create a <code class="prettyprint lang-html">&lt;span&gt;</code> element with the class name <b>button</b>.
+                    <pre class="prettyprint lang-html">
+&lt;span class=&quot;button&quot;&gt;Button&lt;/span&gt;
+                    </pre>
+             <p>
+            Copy the CSS code generated to your css file or styles block. <br/>
+            ex. 
+            </p>
+          <pre class="prettyprint lang-html ">
+&lt;style type=&quot;text/css&quot;&gt;
+<pre class="csscode">
+
+</pre>
+&lt;/style&gt;
+       </pre>
+        </p>
+
+
+    </div>
+
+    
 	
 </body>
 

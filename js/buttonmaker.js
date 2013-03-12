@@ -17,7 +17,7 @@ cssStuff['fontStack']          = "Arial, Helvetica, sans-serif";
     
 function createCSS() {    
 
-    $("#the-code").removeClass("prettyprinted");
+    $(".csscode").removeClass("prettyprinted");
     cssText              = ".button { \n";
     cssText             += "     border-top: 1px solid " + cssStuff['borderTopColor'] + ";\n";
     
@@ -58,7 +58,7 @@ function createCSS() {
     cssText             += "  }\n";
             
     $("style").replaceWith("<style type='text/css'>" + cssText + "</style>");
-    $("#the-code").text(cssText);
+    $(".csscode").text(cssText);
     prettyPrint();
 }
 
@@ -143,15 +143,43 @@ $(function() {
     });
     
     $(".button").click(function() {
-          $("#the-code").dialog('open');
+          $("#the-css").dialog('open');
     });
-    
-        $("#the-code").dialog({
-            "title": "The CSS",
-            "width": 450,
-            resizeable: false,
+
+     $("#howto").dialog({
+            "width": 'auto',
+            "height": 560,
+            resizable: false,
             autoOpen: false,
-      
+            modal: true,
+            'show': 'slow'
+        });
+    
+        $("#the-css").dialog({
+            "title": "The CSS",
+            "width": 'auto',
+            "height": 'auto',
+            resizable: false,
+            autoOpen: false,
+            open: function (event, ui) {
+           //     $(this).css('overflow', 'hidden'); //this line does the actual hiding
+              },
+              buttons: [
+               { text: "Ok", click: function() 
+               { $( this ).dialog( "close" );
+                } 
+           },
+              { text: "How to", click: function() 
+               { 
+
+                    $(this).dialog('close');
+                    $("#howto").dialog('open');
+
+                } 
+
+                }
+
+           ]
         });
 
 });
